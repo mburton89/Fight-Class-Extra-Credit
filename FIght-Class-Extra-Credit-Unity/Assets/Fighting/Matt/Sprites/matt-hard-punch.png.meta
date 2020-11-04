@@ -16,76 +16,10 @@ TextureImporter:
     second: matt-hard-punch_3
   - first:
       213: 21300008
-    second: matt-hard-punch_5
+    second: matt-hard-punch_4
   - first:
       213: 21300010
     second: matt-hard-punch_5
-  - first:
-      213: 21300012
-    second: matt-hard-punch_6
-  - first:
-      213: 21300014
-    second: matt-hard-punch_7
-  - first:
-      213: 21300016
-    second: matt-hard-punch_8
-  - first:
-      213: 21300018
-    second: matt-hard-punch_9
-  - first:
-      213: 21300020
-    second: matt-hard-punch_10
-  - first:
-      213: 21300022
-    second: matt-hard-punch_11
-  - first:
-      213: 21300024
-    second: matt-hard-punch_12
-  - first:
-      213: 21300026
-    second: matt-hard-punch_13
-  - first:
-      213: 21300028
-    second: matt-hard-punch_2
-  - first:
-      213: 21300030
-    second: matt-hard-punch_15
-  - first:
-      213: 21300032
-    second: matt-hard-punch_16
-  - first:
-      213: 21300034
-    second: matt-hard-punch_17
-  - first:
-      213: 21300036
-    second: matt-hard-punch_18
-  - first:
-      213: 21300038
-    second: matt-hard-punch_1
-  - first:
-      213: 21300040
-    second: matt-hard-punch_20
-  - first:
-      213: 21300042
-    second: matt-hard-punch_3
-  - first:
-      213: 21300044
-    second: matt-hard-punch_22
-  - first:
-      213: 21300046
-    second: matt-hard-punch_23
-  - first:
-      213: 21300048
-    second: matt-hard-punch_4
-  - first:
-      213: 21300050
-    second: matt-hard-punch_14
-  - first:
-      213: 21300052
-    second: matt-hard-punch_19
-  - first:
-      213: 21300054
-    second: matt-hard-punch_21
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -320,7 +254,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 5bafe5221d890e14eb63a611c961fbb5
-      internalID: 21300048
+      internalID: 21300008
       vertices: []
       indices: 
       edges: []
@@ -341,7 +275,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 061c4a31f614af942adacadb8c73edb7
-      internalID: 21300008
+      internalID: 21300010
       vertices: []
       indices: 
       edges: []
