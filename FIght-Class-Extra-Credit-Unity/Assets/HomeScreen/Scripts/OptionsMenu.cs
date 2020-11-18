@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class OptionsMenu : MonoBehaviour
+public class OptionssMenu : MonoBehaviour
 {
     private Button _overlayButton;
 
