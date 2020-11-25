@@ -55,7 +55,7 @@ public class FighterStats : MonoBehaviour
 
         if (playerID == 1)
         {
-            if (Input.GetButtonDown("P1Jump"))
+            if (Input.GetButtonDown("P1Jump") && Controller.canJump)
             {
                 jump = true;
             }
@@ -85,10 +85,7 @@ public class FighterStats : MonoBehaviour
 
             if (playerID == 2)
             {
-
-           
-
-                if (Input.GetButtonDown("P2Jump"))
+                if (Input.GetButtonDown("P2Jump") && Controller.canJump)
                 {
                         jump = true;
                 }
