@@ -301,8 +301,8 @@ public class FighterAnimationController : MonoBehaviour
         moveRight = KeyCode.D;
         jump = KeyCode.W;
         block = KeyCode.S;
-        punch = KeyCode.F;
-        kick = KeyCode.G;
+        punch = KeyCode.R;
+        kick = KeyCode.T;
     }
 
     public void EstablishP2Controls()
@@ -312,8 +312,8 @@ public class FighterAnimationController : MonoBehaviour
         moveRight = KeyCode.RightArrow;
         jump = KeyCode.UpArrow;
         block = KeyCode.DownArrow;
-        punch = KeyCode.Keypad1;
-        kick = KeyCode.Keypad2;
+        punch = KeyCode.RightShift;
+        kick = KeyCode.RightControl;
     }
 
     public void DecrementHealth()
