@@ -21,6 +21,7 @@ public class SelectableThumbnail : MonoBehaviour
         _characterSelectMenu = characterSelectMenu;
         _characterIndex =  characterIndex;
         _characterThumbnail.sprite = DataReferenceManager.Instance.characterThumbnails[characterIndex];
+        Debug.Log("Init: " + characterIndex);
         transform.SetParent(parent);
         transform.localScale = Vector3.one;
     }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CharacterSelectMenu : MonoBehaviour
 {
 
-    public int currentYear = 1; 
+    public int currentYear = 0; 
 
     [SerializeField] private SelectableThumbnail _selectableThumbnailPrefab;
     [SerializeField] private GridLayoutGroup _grid2019;
@@ -45,24 +45,27 @@ public class CharacterSelectMenu : MonoBehaviour
         Debug.Log(index);
         if (index == 0) // Year 2019
         {
-            _2019Thumbnails[0].Select(true);
-            _2019Thumbnails[0].Select(false);
+            _2019Thumbnails[0].Select(!FighterSelectSceneController.Instance.player1Selected);
+            //_2019Thumbnails[0].Select(false);
 
             _player1Navigator.Init(_2019Thumbnails);
             _player2Navigator.Init(_2019Thumbnails);
 
-            _grid2019.enabled = true;
+            _grid2020.gameObject.SetActive(false);
+            _grid2019.gameObject.SetActive(true);
         }
         else if (index == 1) // Year 2020
         {
-            _2020Thumbnails[0].Select(true);
-            _2020Thumbnails[0].Select(false);
+            _2020Thumbnails[0].Select(!FighterSelectSceneController.Instance.player1Selected);
+            //_2020Thumbnails[0].Select(false);
 
             _player1Navigator.Init(_2020Thumbnails);
             _player2Navigator.Init(_2020Thumbnails);
 
-            _grid2020.enabled = true;
+            _grid2019.gameObject.SetActive(false);
+            _grid2020.gameObject.SetActive(true);
         }
+        currentYear = index; 
     }
 
     private void Initialize2019()
@@ -75,20 +78,23 @@ public class CharacterSelectMenu : MonoBehaviour
             _2019Thumbnails.Add(newThumbnail);
         }
 
-        _grid2019.enabled = false;
+        _grid2019.gameObject.SetActive(false);
 
     }
 
     private void Initialize2020()
     {
+        Debug.Log(DataReferenceManager.Instance.characterNames.Count);
         for (int i = 9; i < DataReferenceManager.Instance.characterNames.Count; i++)
         {
+            Debug.Log(i);
             SelectableThumbnail newThumbnail = Instantiate(_selectableThumbnailPrefab);
             newThumbnail.transform.SetParent(_grid2020.transform);
             newThumbnail.Init(this, i, _grid2020.transform);
+
             _2020Thumbnails.Add(newThumbnail);
         }
 
-        _grid2020.enabled = false;
+        _grid2020.gameObject.SetActive(false);
     }
 }

@@ -10,7 +10,10 @@ public class FighterSelectSceneController : MonoBehaviour
     [SerializeField] private GameObject _characterSelectContainer;
     [SerializeField] private GameObject _levelSelectContainer;
 
-    [SerializeField] private CharacterPreview _player1Preview;
+    [SerializeField] private CharacterSelectMenu _characterSelectMenu;
+
+
+   [SerializeField] private CharacterPreview _player1Preview;
     [SerializeField] private CharacterPreview _player2Preview;
 
     [SerializeField] private CharacterGridNavigator _player1Nav;
@@ -27,6 +30,8 @@ public class FighterSelectSceneController : MonoBehaviour
     [HideInInspector] public int levelIndex;
 
     [SerializeField] private AudioSource audio;
+
+    [HideInInspector] public bool player1Selected = false;
 
     void Awake()
     {
@@ -53,20 +58,24 @@ public class FighterSelectSceneController : MonoBehaviour
         {
             if (isOnCharacterSelect)
             {
-                _player1Nav.HandleSelected();
-                _player2Nav.HandleSelected();
-                _characterSelectContainer.SetActive(false);
-                _levelSelectContainer.SetActive(true);
-                isOnCharacterSelect = false;
-                StartCoroutine(confirmAudio());
+                if (!player1Selected)
+                {
+                    _player1Nav.HandleSelected();
+                    StartCoroutine(confirmAudio());
+                }
+                else
+                {
+                    _player2Nav.HandleSelected();
+                    StartCoroutine(confirmAudio());
+                }  
             }
             else
             {
                 _levelNav.HandleSelected();
-                print("START FIGHT. " + 
+                /*print("START FIGHT. " + 
                     "p1CharacterIndex: " + p1CharacterIndex + " | " +
                     "p2CharacterIndex: " + p2CharacterIndex + " | " +
-                    "levelIndex: " + levelIndex);
+                    "levelIndex: " + levelIndex);*/
 
                 DataReferenceManager.Instance.p1Index = p1CharacterIndex;
                 DataReferenceManager.Instance.p2Index = p2CharacterIndex;
@@ -98,11 +107,29 @@ public class FighterSelectSceneController : MonoBehaviour
     }
 
     private IEnumerator confirmAudio()
-    {
-        audio.clip = DataReferenceManager.Instance.characterConfirmVO[p1CharacterIndex];
-        audio.Play();
-        yield return new WaitForSeconds(audio.clip.length);
-        audio.clip = DataReferenceManager.Instance.characterConfirmVO[p2CharacterIndex];
-        audio.Play();
+    { 
+        if (!player1Selected)
+        {
+            audio.clip = DataReferenceManager.Instance.characterConfirmVO[p1CharacterIndex];
+            audio.Play();
+            yield return new WaitForSeconds(audio.clip.length);
+            _player1Nav.enabled = false;
+            _player2Nav.enabled = true;
+            player1Selected = true;
+            if (_characterSelectMenu.currentYear == 1)
+            {
+                _characterSelectMenu.SwitchYear(0);
+            }
+        }
+        else
+        {
+            audio.clip = DataReferenceManager.Instance.characterConfirmVO[p2CharacterIndex];
+            audio.Play();
+            yield return new WaitForSeconds(audio.clip.length);
+            _characterSelectContainer.SetActive(false);
+            _levelSelectContainer.SetActive(true);
+            isOnCharacterSelect = false;
+        }
+        
     }
 }

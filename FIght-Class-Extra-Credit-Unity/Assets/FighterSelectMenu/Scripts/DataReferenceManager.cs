@@ -53,5 +53,11 @@ public class DataReferenceManager : MonoBehaviour
         idleSprites.Add(robertIdle);
         idleSprites.Add(zachIdle);
         idleSprites.Add(mattIdle);
+        idleSprites.Add(evanIdle);
+        idleSprites.Add(joshIdle);
+        idleSprites.Add(markIdle);
+        idleSprites.Add(robertIdle);
+        idleSprites.Add(zachIdle);
+        idleSprites.Add(evanIdle);
     }
 }
