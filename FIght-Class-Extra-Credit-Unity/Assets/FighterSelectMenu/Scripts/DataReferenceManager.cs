@@ -21,6 +21,11 @@ public class DataReferenceManager : MonoBehaviour
     [SerializeField] private List<Sprite> robertIdle;
     [SerializeField] private List<Sprite> zachIdle;
     [SerializeField] private List<Sprite> mattIdle;
+    [SerializeField] private List<Sprite> willIdle;
+    [SerializeField] private List<Sprite> charlieIdle;
+    [SerializeField] private List<Sprite> justinIdle;
+    [SerializeField] private List<Sprite> namIdle;
+    [SerializeField] private List<Sprite> jthorIdle;
 
     public List<AudioClip> characterConfirmVO;
 
@@ -53,11 +58,11 @@ public class DataReferenceManager : MonoBehaviour
         idleSprites.Add(robertIdle);
         idleSprites.Add(zachIdle);
         idleSprites.Add(mattIdle);
-        idleSprites.Add(evanIdle);
-        idleSprites.Add(joshIdle);
-        idleSprites.Add(markIdle);
-        idleSprites.Add(robertIdle);
-        idleSprites.Add(zachIdle);
-        idleSprites.Add(evanIdle);
+        idleSprites.Add(willIdle);
+        idleSprites.Add(charlieIdle);
+        idleSprites.Add(justinIdle);
+        idleSprites.Add(namIdle);
+        idleSprites.Add(jthorIdle);
+        idleSprites.Add(mattIdle);
     }
 }
