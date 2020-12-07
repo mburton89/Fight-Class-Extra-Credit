@@ -17,7 +17,7 @@ public class IntroController : MonoBehaviour
 
     private void Start()
     {
-        SkipScene();
+        //SkipScene();
     }
 
     void Update()
