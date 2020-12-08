@@ -12,8 +12,7 @@ public class FighterSelectSceneController : MonoBehaviour
 
     [SerializeField] private CharacterSelectMenu _characterSelectMenu;
 
-
-   [SerializeField] private CharacterPreview _player1Preview;
+    [SerializeField] private CharacterPreview _player1Preview;
     [SerializeField] private CharacterPreview _player2Preview;
 
     [SerializeField] private CharacterGridNavigator _player1Nav;
@@ -119,7 +118,9 @@ public class FighterSelectSceneController : MonoBehaviour
             if (_characterSelectMenu.currentYear == 1)
             {
                 _characterSelectMenu.SwitchYear(0);
+                ChangeYearButton.yearIndex = 0;
             }
+            _player2Nav.Refresh();
         }
         else
         {
