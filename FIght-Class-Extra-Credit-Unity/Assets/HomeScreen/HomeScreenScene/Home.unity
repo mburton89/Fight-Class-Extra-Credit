@@ -1289,7 +1289,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0ee7a49dfa85eb4db4bdfd3b4b6cb36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _overlayButton: {fileID: 0}
 --- !u!114 &870545400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3193,6 +3192,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationAmount: 1
   duration: 1.5
+  leftFace: {fileID: 1003297555}
+  rightFace: {fileID: 1229588290}
+  faces:
+  - {fileID: 21300000, guid: 853b1eae60c843548918ef2d67b68eac, type: 3}
+  - {fileID: 21300000, guid: 4ef0e616e71403345bab238b69b99758, type: 3}
+  - {fileID: 21300000, guid: 1fb46da5f66c9904899493563204a9db, type: 3}
+  - {fileID: 21300000, guid: f37ebeba49b8df745bbe05eb9150b665, type: 3}
 --- !u!1 &1770955895
 GameObject:
   m_ObjectHideFlags: 0
