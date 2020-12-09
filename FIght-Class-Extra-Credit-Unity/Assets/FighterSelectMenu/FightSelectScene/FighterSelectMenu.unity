@@ -469,7 +469,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _characterSelectContainer: {fileID: 250008329}
   _levelSelectContainer: {fileID: 171519554}
-  _characterSelectMenu: {fileID: 1267880228}
   _player1Preview: {fileID: 617213648}
   _player2Preview: {fileID: 657287433}
   _player1Nav: {fileID: 617213650}
@@ -482,7 +481,6 @@ MonoBehaviour:
   p2CharacterIndex: 0
   levelIndex: 0
   audio: {fileID: 412866592}
-  player1Selected: 0
 --- !u!4 &412866591
 Transform:
   m_ObjectHideFlags: 0
@@ -1107,7 +1105,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 937186da5a126e3419f8376af9a73f79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _menu: {fileID: 1267880228}
   isPlayer1: 1
   _up: 119
   _down: 115
@@ -1187,12 +1184,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 657287431}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 937186da5a126e3419f8376af9a73f79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _menu: {fileID: 1267880228}
   isPlayer1: 0
   _up: 273
   _down: 274
@@ -1496,8 +1492,6 @@ MonoBehaviour:
   - Charlie
   - Justin
   - Nam
-  - Jthor
-  - Random
   characterThumbnails:
   - {fileID: 21300000, guid: 5d84bcb3677a4dd4cbb2fbcf3d083813, type: 3}
   - {fileID: 21300000, guid: 8439348a35c5a4c4dabb71cd78bfdf7f, type: 3}
@@ -1512,8 +1506,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: dfafec39ae27ded489a69e629b4f3969, type: 3}
   - {fileID: 21300000, guid: dfafec39ae27ded489a69e629b4f3969, type: 3}
   - {fileID: 21300000, guid: dfafec39ae27ded489a69e629b4f3969, type: 3}
-  - {fileID: 21300000, guid: dfafec39ae27ded489a69e629b4f3969, type: 3}
-  - {fileID: 21300000, guid: 5d84bcb3677a4dd4cbb2fbcf3d083813, type: 3}
   characterPoses:
   - {fileID: 21300000, guid: 048208fd4d79c8e4cb6af30761f3f2c3, type: 3}
   - {fileID: 21300000, guid: 99e0e18d6bfd5d64b81cbadf700ab83e, type: 3}
@@ -1528,13 +1520,13 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 725386f00725c8d47817126e49eca218, type: 3}
   - {fileID: 21300000, guid: 725386f00725c8d47817126e49eca218, type: 3}
   - {fileID: 21300000, guid: 725386f00725c8d47817126e49eca218, type: 3}
-  - {fileID: 21300000, guid: 725386f00725c8d47817126e49eca218, type: 3}
-  - {fileID: 21300000, guid: 725386f00725c8d47817126e49eca218, type: 3}
   levelImages:
   - {fileID: 21300000, guid: 592ffdf9d6b05f245b883d389f43a902, type: 3}
   - {fileID: 21300000, guid: ca9015a2d02220b4790ae0949e6481c0, type: 3}
   - {fileID: 21300000, guid: 18df09c44cbfcbc4887406f36d46f9df, type: 3}
   - {fileID: 21300000, guid: be7123c6a8882444b860275eecfa3393, type: 3}
+  - {fileID: 21300000, guid: c9279689f8505354db182cd217f09b9d, type: 3}
+  - {fileID: 21300000, guid: 5e41fde808619454183dcaa4ecb3d67d, type: 3}
   alecIdle:
   - {fileID: 21300000, guid: 0238f537a833a3b41a9e50e9815835fa, type: 3}
   - {fileID: 21300000, guid: 4a4d052c1b484cd4998ba1f44fdb7825, type: 3}
@@ -1581,12 +1573,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 550fe721628d76740bc794b2c89e2147, type: 3}
   - {fileID: 8300000, guid: 552ef648855938147814bf6cb0f4dfbe, type: 3}
   - {fileID: 8300000, guid: 00df9000501aef54cabfd6ca690d33b8, type: 3}
-  - {fileID: 8300000, guid: 00df9000501aef54cabfd6ca690d33b8, type: 3}
-  - {fileID: 8300000, guid: 00df9000501aef54cabfd6ca690d33b8, type: 3}
-  - {fileID: 8300000, guid: 00df9000501aef54cabfd6ca690d33b8, type: 3}
-  - {fileID: 8300000, guid: 00df9000501aef54cabfd6ca690d33b8, type: 3}
-  - {fileID: 8300000, guid: 00df9000501aef54cabfd6ca690d33b8, type: 3}
-  - {fileID: 8300000, guid: 00df9000501aef54cabfd6ca690d33b8, type: 3}
   fighterPrefabs:
   - {fileID: 1564678191636672880, guid: 9fd0d45617d33a743b1a4004b8fe435e, type: 3}
   - {fileID: 8783713728008185348, guid: 86acc39fd29bc4545b84c32dc72a4532, type: 3}
@@ -1596,12 +1582,6 @@ MonoBehaviour:
   - {fileID: 2639229253579975620, guid: 50102d81c2bf3d647be93e8916ab8598, type: 3}
   - {fileID: 3978335856467767963, guid: 6cc63e18200f0c548ae0f4ff7c55f67d, type: 3}
   - {fileID: 834042008641711502, guid: 9f7b0496b62827945a45d7219b066cf6, type: 3}
-  - {fileID: 4108536428931627497, guid: c328a946d92d6344e975f6eb0512bf54, type: 3}
-  - {fileID: 4108536428931627497, guid: c328a946d92d6344e975f6eb0512bf54, type: 3}
-  - {fileID: 4108536428931627497, guid: c328a946d92d6344e975f6eb0512bf54, type: 3}
-  - {fileID: 4108536428931627497, guid: c328a946d92d6344e975f6eb0512bf54, type: 3}
-  - {fileID: 4108536428931627497, guid: c328a946d92d6344e975f6eb0512bf54, type: 3}
-  - {fileID: 4108536428931627497, guid: c328a946d92d6344e975f6eb0512bf54, type: 3}
   - {fileID: 4108536428931627497, guid: c328a946d92d6344e975f6eb0512bf54, type: 3}
   p1Index: 0
   p2Index: 0
@@ -2002,7 +1982,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -37}
-  m_SizeDelta: {x: -361.38998, y: -196.7}
+  m_SizeDelta: {x: -425.32916, y: -196.7}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1028445819
 MonoBehaviour:
@@ -2038,7 +2018,7 @@ MonoBehaviour:
   m_ChildAlignment: 1
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 235.4, y: 156.93326}
+  m_CellSize: {x: 171.4608, y: 114.4044}
   m_Spacing: {x: 2, y: 2}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -2094,7 +2074,7 @@ GameObject:
   - component: {fileID: 1078313055}
   - component: {fileID: 1078313054}
   m_Layer: 5
-  m_Name: GridLayout 2020 - CharacterSelection
+  m_Name: GridLayout 2020 - CharacterSelection (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2458,7 +2438,6 @@ MonoBehaviour:
   _grid2020: {fileID: 1078313055}
   _player1Navigator: {fileID: 617213650}
   _player2Navigator: {fileID: 657287435}
-  _classYearDisplay: {fileID: 2069367630}
 --- !u!1 &1293827184
 GameObject:
   m_ObjectHideFlags: 0
@@ -3654,7 +3633,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Class of \n2019"
+  m_text: "Class of \n2020"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 20bc136a511807049bedfe3f1aea9f8a, type: 2}
   m_sharedMaterial: {fileID: -561123826337424826, guid: 20bc136a511807049bedfe3f1aea9f8a,
