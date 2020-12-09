@@ -195,7 +195,7 @@ RectTransform:
   m_GameObject: {fileID: 6793162500851201609}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 0}
+  m_LocalScale: {x: 0.345, y: 0.345, z: 0}
   m_Children:
   - {fileID: 6144500341723464425}
   m_Father: {fileID: 0}
@@ -246,7 +246,7 @@ SpriteRenderer:
   m_SortingLayerID: 150659803
   m_SortingLayer: 1
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 1ae9f6da7b0010a43a05baa5a073cbbf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f499883794f877048b416609c15f995e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -271,23 +271,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentFrame: {fileID: 7445275569521087282}
   idleSprites:
-  - {fileID: 21300000, guid: 1ae9f6da7b0010a43a05baa5a073cbbf, type: 3}
-  - {fileID: 21300002, guid: 1ae9f6da7b0010a43a05baa5a073cbbf, type: 3}
-  - {fileID: 21300004, guid: 1ae9f6da7b0010a43a05baa5a073cbbf, type: 3}
+  - {fileID: 21300000, guid: f499883794f877048b416609c15f995e, type: 3}
+  - {fileID: 21300000, guid: 9f05c7083afd47c46a204dbf760a3e41, type: 3}
+  - {fileID: 21300000, guid: 3e3b80dfc52797a4fbbecd42bfb2e5f6, type: 3}
   lightPunchSprites:
-  - {fileID: 21300000, guid: e8ef8623a693d864e9c2cbb89a93dad5, type: 3}
-  - {fileID: 21300002, guid: e8ef8623a693d864e9c2cbb89a93dad5, type: 3}
-  - {fileID: 21300004, guid: e8ef8623a693d864e9c2cbb89a93dad5, type: 3}
-  - {fileID: 21300006, guid: e8ef8623a693d864e9c2cbb89a93dad5, type: 3}
+  - {fileID: 21300000, guid: 2687dc46da47d3548a5b8da8eb93c0f5, type: 3}
+  - {fileID: 21300000, guid: 8f0309acb42a4ad4d98074012483e8d3, type: 3}
+  - {fileID: 21300000, guid: c816887e2ab52c449bea087d6d13b17c, type: 3}
+  - {fileID: 21300000, guid: 9169fe3e813d3e549ad59bdc212ea0b4, type: 3}
   lightKickSprites:
-  - {fileID: 21300000, guid: bd7bbaed1fc25b445a6d503bd54450aa, type: 3}
-  - {fileID: 21300002, guid: bd7bbaed1fc25b445a6d503bd54450aa, type: 3}
-  - {fileID: 21300004, guid: bd7bbaed1fc25b445a6d503bd54450aa, type: 3}
-  - {fileID: 21300006, guid: bd7bbaed1fc25b445a6d503bd54450aa, type: 3}
+  - {fileID: 21300000, guid: f6eb53c98eb1b1241a4aa6c5b0079fde, type: 3}
+  - {fileID: 21300000, guid: b2bf6fbfab0cd5c41811acd6a01dcaba, type: 3}
+  - {fileID: 21300000, guid: 0ed1a1e4ac9b0f540b5d0c50a43f6f95, type: 3}
+  - {fileID: 21300000, guid: d9461c3e6ad0ac1458ce69887ed8284a, type: 3}
   jumpSprites:
-  - {fileID: 21300000, guid: 02b795250a4c586439c1bd3d26455324, type: 3}
-  - {fileID: 21300002, guid: 02b795250a4c586439c1bd3d26455324, type: 3}
-  blockSprite: {fileID: 21300000, guid: 3ae91f7058dd7364fb93991e64379649, type: 3}
+  - {fileID: 21300000, guid: 8493af08116f2ad4d8d9374877f8fcbe, type: 3}
+  blockSprite: {fileID: 21300000, guid: 6c9f0e7c2bbf33f45ab7c92b11f7c7a7, type: 3}
   idleFrameDuration: 0.25
   punchFrameDuration: 0.15
   blockFrameDuration: 0.25
