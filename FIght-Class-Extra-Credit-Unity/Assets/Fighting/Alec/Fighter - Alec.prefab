@@ -51,6 +51,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -62,6 +64,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -99,23 +102,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentFrame: {fileID: 1564678191636672882}
   idleSprites:
-  - {fileID: 21300000, guid: 301b029d89a25a94fb1f30f02223ad94, type: 3}
-  - {fileID: 21300002, guid: 301b029d89a25a94fb1f30f02223ad94, type: 3}
-  - {fileID: 21300004, guid: 301b029d89a25a94fb1f30f02223ad94, type: 3}
+  - {fileID: 21300000, guid: 1a45ec53f712f0840b3059363ef6ff94, type: 3}
+  - {fileID: 21300000, guid: 98d89ea605f5415408920e42f4decafc, type: 3}
+  - {fileID: 21300000, guid: fbef45c9cfe2bcb4c90b2d055b18d268, type: 3}
   lightPunchSprites:
-  - {fileID: 21300000, guid: 5841a75d8218d974d989a3d704f567d8, type: 3}
-  - {fileID: 21300002, guid: 5841a75d8218d974d989a3d704f567d8, type: 3}
-  - {fileID: 21300004, guid: 5841a75d8218d974d989a3d704f567d8, type: 3}
-  - {fileID: 21300006, guid: 5841a75d8218d974d989a3d704f567d8, type: 3}
+  - {fileID: 21300000, guid: 04036501bc200a14782ca353103c9fe7, type: 3}
+  - {fileID: 21300000, guid: b092ce0b4f23c3f4589a5ae229097552, type: 3}
+  - {fileID: 21300000, guid: 7389b0c0ed9c84b4886025220cf4f35d, type: 3}
+  - {fileID: 21300000, guid: 07d53505557e0d04c82a57d0fb879f36, type: 3}
   lightKickSprites:
-  - {fileID: 21300000, guid: bd7bbaed1fc25b445a6d503bd54450aa, type: 3}
-  - {fileID: 21300006, guid: bd7bbaed1fc25b445a6d503bd54450aa, type: 3}
-  - {fileID: 21300004, guid: bd7bbaed1fc25b445a6d503bd54450aa, type: 3}
-  - {fileID: 21300002, guid: bd7bbaed1fc25b445a6d503bd54450aa, type: 3}
+  - {fileID: 21300000, guid: 95a16b85f396ce84ebbbe04b20cebbda, type: 3}
+  - {fileID: 21300000, guid: acd692855e05a474fb5af574628545bc, type: 3}
+  - {fileID: 21300000, guid: a7a62c6da2a48704696ce3a7c9ce2fbb, type: 3}
+  - {fileID: 21300000, guid: 9911b57e7ab25bc4f9c25a46dca0e4ec, type: 3}
   jumpSprites:
-  - {fileID: 21300000, guid: 3c9f4c41583b3a44794f93a3ce95997b, type: 3}
-  - {fileID: 21300002, guid: 3c9f4c41583b3a44794f93a3ce95997b, type: 3}
-  blockSprite: {fileID: 21300000, guid: 4639bf96f05979f438994390a773d04d, type: 3}
+  - {fileID: 21300000, guid: 85efb2a07066bc744a19dacc4fedd9ee, type: 3}
+  - {fileID: 21300000, guid: 8354d4b8ab0d7684da3f5a88a4dd5bf3, type: 3}
+  blockSprite: {fileID: 21300000, guid: 2cd4cad202e93b74ea5cc492c01ea883, type: 3}
   idleFrameDuration: 0.25
   punchFrameDuration: 0.15
   blockFrameDuration: 0.25
@@ -123,3 +126,8 @@ MonoBehaviour:
   jumpHeight: 3.5
   jumpUpEase: 21
   jumpDownEase: 20
+  _body: {fileID: 0}
+  _kickDistance: 3.2
+  _kickHeight: -1.8
+  _sfx: []
+  isTestMode: 0
