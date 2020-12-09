@@ -954,6 +954,11 @@ MonoBehaviour:
   - Robert
   - Zach
   - Matt
+  - Will
+  - Charlie
+  - Justin
+  - Nam
+  - JThor
   characterThumbnails:
   - {fileID: 21300000, guid: 5d84bcb3677a4dd4cbb2fbcf3d083813, type: 3}
   - {fileID: 21300000, guid: 8439348a35c5a4c4dabb71cd78bfdf7f, type: 3}
@@ -963,6 +968,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1d75eb9b34eba8346aaa735c08bd174f, type: 3}
   - {fileID: 21300000, guid: cae9b6be958f25945a82c43668f8d33c, type: 3}
   - {fileID: 21300000, guid: cc55fd292f3b48b4ea4ef24654d73e31, type: 3}
+  - {fileID: 21300000, guid: dfafec39ae27ded489a69e629b4f3969, type: 3}
+  - {fileID: 21300000, guid: dfafec39ae27ded489a69e629b4f3969, type: 3}
+  - {fileID: 21300000, guid: dfafec39ae27ded489a69e629b4f3969, type: 3}
+  - {fileID: 21300000, guid: dfafec39ae27ded489a69e629b4f3969, type: 3}
+  - {fileID: 21300000, guid: dfafec39ae27ded489a69e629b4f3969, type: 3}
   - {fileID: 21300000, guid: dfafec39ae27ded489a69e629b4f3969, type: 3}
   characterPoses:
   - {fileID: 21300000, guid: 048208fd4d79c8e4cb6af30761f3f2c3, type: 3}
@@ -982,9 +992,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c9279689f8505354db182cd217f09b9d, type: 3}
   - {fileID: 21300000, guid: 5e41fde808619454183dcaa4ecb3d67d, type: 3}
   alecIdle:
-  - {fileID: 21300000, guid: 301b029d89a25a94fb1f30f02223ad94, type: 3}
-  - {fileID: 21300002, guid: 301b029d89a25a94fb1f30f02223ad94, type: 3}
-  - {fileID: 21300004, guid: 301b029d89a25a94fb1f30f02223ad94, type: 3}
+  - {fileID: 21300000, guid: 1a45ec53f712f0840b3059363ef6ff94, type: 3}
+  - {fileID: 21300000, guid: 98d89ea605f5415408920e42f4decafc, type: 3}
+  - {fileID: 21300000, guid: fbef45c9cfe2bcb4c90b2d055b18d268, type: 3}
   danielIdle:
   - {fileID: 21300000, guid: 25695e44665af8c4c9b25101bf309d94, type: 3}
   - {fileID: 21300000, guid: 74dcbb6838f216643938e36db3742f0f, type: 3}
@@ -1017,11 +1027,27 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1ae9f6da7b0010a43a05baa5a073cbbf, type: 3}
   - {fileID: 21300002, guid: 1ae9f6da7b0010a43a05baa5a073cbbf, type: 3}
   - {fileID: 21300004, guid: 1ae9f6da7b0010a43a05baa5a073cbbf, type: 3}
-  willIdle: []
-  charlieIdle: []
-  justinIdle: []
-  namIdle: []
-  jthorIdle: []
+  willIdle:
+  - {fileID: 21300000, guid: dce79e19c341b934f8d7e4517139f2d8, type: 3}
+  - {fileID: 21300000, guid: 8cfc6c9d96f19dc468f86c2d72e87162, type: 3}
+  - {fileID: 21300000, guid: 136e6f51781552e4493ab30b7967918d, type: 3}
+  charlieIdle:
+  - {fileID: 21300000, guid: 0824ea07cd42b804e988e19688c46626, type: 3}
+  - {fileID: 21300000, guid: e43acbe6a62c4f141859e6c3f6cadf8d, type: 3}
+  - {fileID: 21300000, guid: ef7c2b3443cebb94ab1b6d35e63873ce, type: 3}
+  - {fileID: 21300000, guid: 44c0b14cb038234478734e9c90eddfec, type: 3}
+  justinIdle:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  namIdle:
+  - {fileID: 21300000, guid: d83223bcf0bd51842b5889c285fa2d42, type: 3}
+  - {fileID: 21300000, guid: be5ec2a8ab2eb8140898991465664b47, type: 3}
+  - {fileID: 21300000, guid: 3dcc2a3a5b04b6d49a51c9704c8a0b3f, type: 3}
+  jthorIdle:
+  - {fileID: 21300000, guid: f499883794f877048b416609c15f995e, type: 3}
+  - {fileID: 21300000, guid: 9f05c7083afd47c46a204dbf760a3e41, type: 3}
+  - {fileID: 21300000, guid: 3e3b80dfc52797a4fbbecd42bfb2e5f6, type: 3}
   characterConfirmVO:
   - {fileID: 8300000, guid: 69598459407613b48b15f41b63fee899, type: 3}
   - {fileID: 8300000, guid: 3eab09e48b8a66d4dac186d538df4e4b, type: 3}
@@ -1031,6 +1057,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 69598459407613b48b15f41b63fee899, type: 3}
   - {fileID: 8300000, guid: 550fe721628d76740bc794b2c89e2147, type: 3}
   - {fileID: 8300000, guid: 38721084bf7c13444a9dd2f02062b055, type: 3}
+  - {fileID: 8300000, guid: 00df9000501aef54cabfd6ca690d33b8, type: 3}
+  - {fileID: 8300000, guid: 00df9000501aef54cabfd6ca690d33b8, type: 3}
+  - {fileID: 8300000, guid: 00df9000501aef54cabfd6ca690d33b8, type: 3}
+  - {fileID: 8300000, guid: 00df9000501aef54cabfd6ca690d33b8, type: 3}
+  - {fileID: 8300000, guid: 00df9000501aef54cabfd6ca690d33b8, type: 3}
   - {fileID: 8300000, guid: 00df9000501aef54cabfd6ca690d33b8, type: 3}
   fighterPrefabs:
   - {fileID: 1564678191636672880, guid: 9fd0d45617d33a743b1a4004b8fe435e, type: 3}
