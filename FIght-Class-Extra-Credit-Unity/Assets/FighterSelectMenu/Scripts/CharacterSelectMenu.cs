@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CharacterSelectMenu : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class CharacterSelectMenu : MonoBehaviour
 
     [SerializeField] private CharacterGridNavigator _player1Navigator;
     [SerializeField] private CharacterGridNavigator _player2Navigator;
+
+    [SerializeField] private TextMeshProUGUI _classYearDisplay;
 
     void Start()
     {
@@ -43,8 +46,21 @@ public class CharacterSelectMenu : MonoBehaviour
     public void SwitchYear(int index)
     {
         Debug.Log(index);
+        
+        if (!FighterSelectSceneController.Instance.player1Selected)
+        {
+            _player1Navigator.Deselect();
+        }
+        else
+        {
+            _player1Navigator.Deselect();
+            _player2Navigator.Deselect();
+        }
+        
+
         if (index == 0) // Year 2019
         {
+            //_2020Thumbnails[0].Select(!FighterSelectSceneController.Instance.player1Selected);
             _2019Thumbnails[0].Select(!FighterSelectSceneController.Instance.player1Selected);
             //_2019Thumbnails[0].Select(false);
 
@@ -53,9 +69,12 @@ public class CharacterSelectMenu : MonoBehaviour
 
             _grid2020.gameObject.SetActive(false);
             _grid2019.gameObject.SetActive(true);
+
+            _classYearDisplay.SetText("Class of\n2019");
         }
         else if (index == 1) // Year 2020
         {
+            //_2019Thumbnails[0].Select(!FighterSelectSceneController.Instance.player1Selected);
             _2020Thumbnails[0].Select(!FighterSelectSceneController.Instance.player1Selected);
             //_2020Thumbnails[0].Select(false);
 
@@ -64,6 +83,8 @@ public class CharacterSelectMenu : MonoBehaviour
 
             _grid2019.gameObject.SetActive(false);
             _grid2020.gameObject.SetActive(true);
+
+            _classYearDisplay.SetText("Class of\n2020");
         }
         currentYear = index; 
     }
@@ -75,6 +96,7 @@ public class CharacterSelectMenu : MonoBehaviour
             SelectableThumbnail newThumbnail = Instantiate(_selectableThumbnailPrefab);
             newThumbnail.transform.SetParent(_grid2019.transform);
             newThumbnail.Init(this, i, _grid2019.transform);
+
             _2019Thumbnails.Add(newThumbnail);
         }
 
@@ -87,7 +109,6 @@ public class CharacterSelectMenu : MonoBehaviour
         Debug.Log(DataReferenceManager.Instance.characterNames.Count);
         for (int i = 9; i < DataReferenceManager.Instance.characterNames.Count; i++)
         {
-            Debug.Log(i);
             SelectableThumbnail newThumbnail = Instantiate(_selectableThumbnailPrefab);
             newThumbnail.transform.SetParent(_grid2020.transform);
             newThumbnail.Init(this, i, _grid2020.transform);

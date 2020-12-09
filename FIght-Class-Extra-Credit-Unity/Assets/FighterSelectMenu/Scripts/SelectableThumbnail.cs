@@ -33,7 +33,17 @@ public class SelectableThumbnail : MonoBehaviour
 
     void UpdateCharacterPreview()
     {
-        FighterSelectSceneController.Instance.UpdatePlayer1Preview(_characterIndex);
+        if (!FighterSelectSceneController.Instance.player1Selected)
+        {
+            FighterSelectSceneController.Instance.UpdatePlayer1Preview(_characterIndex);
+            Select(true);
+        }
+        else
+        {
+            FighterSelectSceneController.Instance.UpdatePlayer2Preview(_characterIndex);
+            Select(false);
+        }
+        
     }
 
     public void Select(bool isPlayer1)

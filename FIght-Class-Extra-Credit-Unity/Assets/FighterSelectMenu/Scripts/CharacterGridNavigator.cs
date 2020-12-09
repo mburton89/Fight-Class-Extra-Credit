@@ -15,10 +15,13 @@ public class CharacterGridNavigator : MonoBehaviour
     [SerializeField] private KeyCode _left;
     [SerializeField] private KeyCode _right;
 
+    private bool _initialized;
+
     public void Init(List<SelectableThumbnail> characters)
     {
         _characters = characters;
         _currentIndex = 0;
+        _initialized = true;
     }
 
     void Update()
@@ -163,5 +166,24 @@ public class CharacterGridNavigator : MonoBehaviour
         {
             FighterSelectSceneController.Instance.p2CharacterIndex = _selected;
         }
+    }
+
+    public void Deselect()
+    {
+        if (_initialized)
+        {
+            for (int _i = 0; _i < _characters.Count; _i++)
+            {
+                if (_characters[_i])
+                {
+                    _characters[_i].Deselect(isPlayer1);
+                }
+            }
+        }
+    }
+
+    public void Refresh()
+    {
+        _characters[_currentIndex].Select(isPlayer1);
     }
 }
