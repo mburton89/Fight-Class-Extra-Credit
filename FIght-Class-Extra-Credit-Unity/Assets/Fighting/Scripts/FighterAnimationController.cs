@@ -26,6 +26,7 @@ public class FighterAnimationController : MonoBehaviour
 
     private Coroutine _currentCoroutine = null;
     private bool _canAttack;
+    private bool _canJump;
     private bool _isBlocking;
 
     private KeyCode moveLeft;
@@ -104,7 +105,7 @@ public class FighterAnimationController : MonoBehaviour
         {
             Unblock();
         }
-        else if (Input.GetKeyDown(jump) && _canAttack)
+        else if (Input.GetKeyDown(jump) && _canAttack && _canJump)
         {
             StopCoroutine(_currentCoroutine);
             PlayJumpAnimation();
@@ -147,12 +148,13 @@ public class FighterAnimationController : MonoBehaviour
 
     public void PlayJumpAnimation()
     {
-        StartCoroutine(JumpAnimation());
+            StartCoroutine(JumpAnimation());
     }
 
     private IEnumerator IdleAnimation()
     {
         _canAttack = true;
+        _canJump = true;
         currentFrame.sprite = idleSprites[0];
         yield return new WaitForSeconds(idleFrameDuration);
         currentFrame.sprite = idleSprites[1];
@@ -240,6 +242,7 @@ public class FighterAnimationController : MonoBehaviour
 
     private IEnumerator JumpAnimation()
     {
+        _canJump = false;
         _canAttack = false;
         currentFrame.sprite = jumpSprites[0];
         yield return new WaitForSeconds(punchFrameDuration);
@@ -261,6 +264,9 @@ public class FighterAnimationController : MonoBehaviour
 
         yield return new WaitForSeconds(punchFrameDuration * jumpDurationMultiplier);
         PlayIdleAnimation();
+
+        yield return new WaitForSeconds(1);
+        _canJump = true;
     }
 
     private IEnumerator Block()

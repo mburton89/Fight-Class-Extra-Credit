@@ -22,6 +22,8 @@ public class CharacterController2D : MonoBehaviour
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
 
+    [HideInInspector] public bool canJump;
+
 	[Header("Events")]
 	[Space]
 
@@ -42,7 +44,10 @@ public class CharacterController2D : MonoBehaviour
 
 		if (OnCrouchEvent == null)
 			OnCrouchEvent = new BoolEvent();
-	}
+
+        canJump = true;
+
+    }
 
 	private void FixedUpdate()
 	{
@@ -138,8 +143,10 @@ public class CharacterController2D : MonoBehaviour
 
     private IEnumerator JumpCo()
     {
+        canJump = false;
         yield return new WaitForSeconds(_jumpDelay);
         m_Grounded = false;
+        canJump = true;
         m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
     }
 

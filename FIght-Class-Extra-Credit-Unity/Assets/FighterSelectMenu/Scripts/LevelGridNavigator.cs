@@ -46,25 +46,25 @@ public class LevelGridNavigator : MonoBehaviour
 
     void NavigateUp()
     {
-        if (_currentIndex == 0 || _currentIndex == 1) return;
+        if (_currentIndex <= 2) return;
         _levels[_currentIndex].Deselect();
-        _currentIndex = _currentIndex - 2;
+        _currentIndex = _currentIndex - 3;
         _levels[_currentIndex].Select();
         MenuSFX.Instance.Click();
     }
 
     void NavigateDown()
     {
-        if (_currentIndex > 1) return;
+        if (_currentIndex > 2) return;
         _levels[_currentIndex].Deselect();
-        _currentIndex = _currentIndex + 2;
+        _currentIndex = _currentIndex + 3;
         _levels[_currentIndex].Select();
         MenuSFX.Instance.Click();
     }
 
     void NavigateLeft()
     {
-        if (_currentIndex == 0 || _currentIndex == 2) return;
+        if (_currentIndex == 0 || _currentIndex == 3) return;
         _levels[_currentIndex].Deselect();
         _currentIndex = _currentIndex - 1;
         _levels[_currentIndex].Select();
@@ -73,7 +73,7 @@ public class LevelGridNavigator : MonoBehaviour
 
     void NavigateRight()
     {
-        if (_currentIndex == 1 || _currentIndex == 3) return;
+        if (_currentIndex == 2 || _currentIndex == 5) return;
         _levels[_currentIndex].Deselect();
         _currentIndex = _currentIndex + 1;
         _levels[_currentIndex].Select();
