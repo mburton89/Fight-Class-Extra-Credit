@@ -109,6 +109,7 @@ public class FighterSelectSceneController : MonoBehaviour
     { 
         if (!player1Selected)
         {
+            AudioClip initialClip = audio.clip;
             audio.clip = DataReferenceManager.Instance.characterConfirmVO[p1CharacterIndex];
             audio.Play();
             yield return new WaitForSeconds(audio.clip.length);
@@ -121,15 +122,18 @@ public class FighterSelectSceneController : MonoBehaviour
                 ChangeYearButton.yearIndex = 0;
             }
             _player2Nav.Refresh();
+            audio.clip = initialClip;
         }
         else
         {
+            AudioClip initialClip = audio.clip;
             audio.clip = DataReferenceManager.Instance.characterConfirmVO[p2CharacterIndex];
             audio.Play();
             yield return new WaitForSeconds(audio.clip.length);
             _characterSelectContainer.SetActive(false);
             _levelSelectContainer.SetActive(true);
             isOnCharacterSelect = false;
+            audio.clip = initialClip;
         }
         
     }
